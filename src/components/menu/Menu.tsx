@@ -3,30 +3,39 @@ import styled from "styled-components";
 export const Menu = () => {
   return (
     <StyledMenu>
-      <ul>
-        <li>
+      <MenuList>
+        <MenuItem>
           <a href="">Home</a>
-        </li>
-        <li>
-          <a href="">About</a>
-        </li>
-        <li>
-          <a href="">Tech Stack</a>
-        </li>
-        <li>
-          <a href="">Projects</a>
-        </li>
-        <li>
-          <a href="">Contact</a>
-        </li>
-      </ul>
+        </MenuItem>
+        <MenuItem>
+          <MenuLink href="#">About</MenuLink>
+        </MenuItem>
+        <MenuItem>
+          <MenuLink href="#">Tech Stack</MenuLink>
+        </MenuItem>
+        <MenuItem>
+          <MenuLink href="#">Projects</MenuLink>
+        </MenuItem>
+        <MenuItem>
+          <MenuLink href="#">Contact</MenuLink>
+        </MenuItem>
+      </MenuList>
     </StyledMenu>
   );
 };
 
-const StyledMenu = styled.nav`
-  ul {
-    display: flex;
-    gap: 20px;
-  }
+const StyledMenu = styled.nav``;
+
+const MenuList = styled.ul`
+  display: flex;
+  gap: 20px;
+`;
+
+const MenuItem = styled.li`
+  list-style-type: none;
+`;
+
+const MenuLink = styled.a`
+  text-decoration: none;
+  color: #fff;
 `;

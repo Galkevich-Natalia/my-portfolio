@@ -7,7 +7,7 @@ export const Main = () => {
     <StyledMain>
       <FlexWrapper display={"flex"} justify={"space-around"} align={"center"}>
         <div>
-          <span>Hi everybody!</span>
+          <Greeting>Hi everybody!</Greeting>
           <Name>I'm Natalia Galkevich</Name>
           <MainTitle>A web developer</MainTitle>
         </div>
@@ -18,9 +18,7 @@ export const Main = () => {
   );
 };
 
-const StyledMain = styled.div`
-  min-height: 100vh;
-  background-color: #fcdc67;
+const StyledMain = styled.section`
 `;
 
 const Photo = styled.img`
@@ -29,6 +27,14 @@ const Photo = styled.img`
   object-fit: cover;
 `;
 
-const MainTitle = styled.h1``;
+const Greeting = styled.span`
+  color: #fff;
+`;
 
-const Name = styled.h2``;
+const MainTitle = styled.h1`
+  color: #fff;
+`;
+
+const Name = styled.h2`
+  color: #fff;
+`;
