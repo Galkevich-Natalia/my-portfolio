@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Icon } from "../../components/icon/Icon";
+import { Social } from "../../components/social/Social";
 
 export const FooterTop = () => {
   return (
@@ -8,38 +9,7 @@ export const FooterTop = () => {
       <StyledContactsWrap>
         <Phone>+1 555 505 5050</Phone>
         <Email>info@designmodo.com</Email>
-        <SocialList>
-          <SocialItem>
-            <SocialLink>
-              <Icon
-                iconId={"githubSocial"}
-                width={"30px"}
-                height={"30px"}
-                viewBox={"0 0 21px 21px"}
-              />
-            </SocialLink>
-          </SocialItem>
-          <SocialItem>
-            <SocialLink>
-              <Icon
-                iconId={"twitter"}
-                width={"30px"}
-                height={"30px"}
-                viewBox={"0 0 21px 21px"}
-              />
-            </SocialLink>
-          </SocialItem>
-          <SocialItem>
-            <SocialLink>
-              <Icon
-                iconId={"linkedin"}
-                width={"30px"}
-                height={"30px"}
-                viewBox={"0 0 21px 21px"}
-              />
-            </SocialLink>
-          </SocialItem>
-        </SocialList>
+        <Social />
       </StyledContactsWrap>
     </StyledFooterTop>
   );
@@ -64,15 +34,3 @@ const Phone = styled.span`
 const Email = styled.span`
   color: #fff;
 `;
-
-const SocialList = styled.ul`
-  margin: 0;
-  display: flex;
-  gap: 30px;
-`;
-
-const SocialItem = styled.li`
-  list-style-type: none;
-`;
-
-const SocialLink = styled.a``;
