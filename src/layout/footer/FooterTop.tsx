@@ -5,7 +5,12 @@ import { Social } from "../../components/social/Social";
 export const FooterTop = () => {
   return (
     <StyledFooterTop>
-      <Icon iconId={"logoFooter"} width={"97"} height={"59"} />
+      <Icon
+        iconId={"logoFooter"}
+        width={"97"}
+        height={"59"}
+        viewBox={"0 0 97px 59px"}
+      />
       <StyledContactsWrap>
         <Phone>+1 555 505 5050</Phone>
         <Email>info@designmodo.com</Email>

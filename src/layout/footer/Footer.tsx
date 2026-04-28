@@ -6,7 +6,6 @@ export const Footer = () => {
   return (
     <StyledFooter>
       <FooterTop />
-      <hr />
       <FooterBottom />
     </StyledFooter>
   );

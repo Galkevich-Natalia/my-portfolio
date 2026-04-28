@@ -10,7 +10,7 @@ export const Social = () => {
             iconId={"githubSocial"}
             width={"30px"}
             height={"30px"}
-            viewBox={"0 0 21px 21px"}
+            viewBox={"0 0 30px 30px"}
           />
         </SocialLink>
       </SocialItem>
@@ -20,7 +20,7 @@ export const Social = () => {
             iconId={"twitter"}
             width={"30px"}
             height={"30px"}
-            viewBox={"0 0 21px 21px"}
+            viewBox={"0 0 30px 30px"}
           />
         </SocialLink>
       </SocialItem>
@@ -30,7 +30,7 @@ export const Social = () => {
             iconId={"linkedin"}
             width={"30px"}
             height={"30px"}
-            viewBox={"0 0 21px 21px"}
+            viewBox={"0 0 30px 30px"}
           />
         </SocialLink>
       </SocialItem>
