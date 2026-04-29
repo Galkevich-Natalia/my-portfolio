@@ -1,24 +1,24 @@
 import styled from "styled-components";
 
-export const Menu = () => {
+export const Menu = (props: { menuItems: Array<string> }) => {
   return (
     <StyledMenu>
       <MenuList>
-        <MenuItem>
-          <a href="">Home</a>
-        </MenuItem>
-        <MenuItem>
-          <MenuLink href="#">About</MenuLink>
-        </MenuItem>
-        <MenuItem>
-          <MenuLink href="#">Tech Stack</MenuLink>
-        </MenuItem>
-        <MenuItem>
-          <MenuLink href="#">Projects</MenuLink>
-        </MenuItem>
-        <MenuItem>
-          <MenuLink href="#">Contact</MenuLink>
-        </MenuItem>
+        {props.menuItems.map((item, index) => {
+          return (
+            <MenuItem key={index}>
+              <MenuLink href="#">
+                {item}
+                <Mask>
+                  <span>{item}</span>
+                </Mask>
+                <Mask>
+                  <span>{item}</span>
+                </Mask>
+              </MenuLink>
+            </MenuItem>
+          );
+        })}
       </MenuList>
     </StyledMenu>
   );
@@ -31,11 +31,63 @@ const MenuList = styled.ul`
   gap: 20px;
 `;
 
-const MenuItem = styled.li`
-  list-style-type: none;
+const MenuLink = styled.a`
+  font-family: "DM Sana", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  color: transparent;
 `;
 
-const MenuLink = styled.a`
-  text-decoration: none;
-  color: #fff;
+const Mask = styled.span`
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  height: 50%;
+  overflow-y: hidden;
+  color: #a7a7a7;
+
+  & + & {
+    top: 50%;
+    span {
+      display: inline-block;
+      transform: translateY(-50%);
+    }
+  }
+`;
+
+const MenuItem = styled.li`
+  position: relative;
+
+  padding-right: 20px;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    height: 3px;
+    background-color: #a7a7a7;
+
+    position: absolute;
+    top: 50%;
+    left: -10px;
+    right: -10px;
+    z-index: 1;
+
+    transform: scale(0);
+  }
+
+  &:hover {
+    &::before {
+      transform: scale(1);
+    }
+
+    ${Mask} {
+      transform: skewX(12deg) translateX(5px);
+      color: #fff;
+
+      & + ${Mask} {
+        transform: skewX(12deg) translateX(-5px);
+      }
+    }
+  }
 `;

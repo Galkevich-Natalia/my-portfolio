@@ -9,7 +9,7 @@ export const FooterTop = () => {
         iconId={"logoFooter"}
         width={"97"}
         height={"59"}
-        viewBox={"0 0 97px 59px"}
+        viewBox={"0 0 97 59"}
       />
       <StyledContactsWrap>
         <Phone>+1 555 505 5050</Phone>

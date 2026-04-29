@@ -15,8 +15,21 @@ type FlexWrapperPropsType = {
   alignItemsGrid?: string;
 };
 
-export const FlexWrapper = styled.div<FlexWrapperPropsType>`
-  /* display: flex; */
+export const FlexWrapper = styled.div.withConfig({
+  shouldForwardProp: (prop) =>
+    ![
+      "display",
+      "direction",
+      "justify",
+      "align",
+      "wrap",
+      "gridTemplateColumns",
+      "gridTemplateRows",
+      "gap",
+      "justifyItems",
+      "alignItemsGrid",
+    ].includes(prop),
+})<FlexWrapperPropsType>`
   display: ${(props) => props.display || "flex"};
   flex-direction: ${(props) => props.direction || "row"};
   justify-content: ${(props) => props.justify || "flex-start"};
