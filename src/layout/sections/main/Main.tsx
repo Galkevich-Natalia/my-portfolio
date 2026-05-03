@@ -36,7 +36,7 @@ export const Main = () => {
 const StyledMain = styled.section`
   min-height: 100vh;
   display: flex;
-  padding-top: 200px;
+  padding: 315px 0 205px 0;
 `;
 
 const MainTitle = styled.h1`

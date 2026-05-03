@@ -44,4 +44,8 @@ export const GlobalStyle = createGlobalStyle`
     footer {
         background-color: ${theme.colors.primaryBg};
     }
+
+    section {
+        padding: 80px 0;
+    }
 `;

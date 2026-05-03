@@ -13,6 +13,8 @@ type FlexWrapperPropsType = {
 
   justifyItems?: string;
   alignItemsGrid?: string;
+
+  paddingTop?: string;
 };
 
 export const FlexWrapper = styled.div.withConfig({
@@ -28,6 +30,7 @@ export const FlexWrapper = styled.div.withConfig({
       "gap",
       "justifyItems",
       "alignItemsGrid",
+      "paddingTop",
     ].includes(prop),
 })<FlexWrapperPropsType>`
   display: ${(props) => props.display || "flex"};
@@ -42,6 +45,8 @@ export const FlexWrapper = styled.div.withConfig({
 
   justify-items: ${(props) => props.justifyItems};
   align-items: ${(props) => props.alignItemsGrid};
+
+  padding-top: ${(props) => props.paddingTop};
 
   height: 100%;
 `;
