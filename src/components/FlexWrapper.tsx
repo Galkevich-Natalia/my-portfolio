@@ -42,4 +42,6 @@ export const FlexWrapper = styled.div.withConfig({
 
   justify-items: ${(props) => props.justifyItems};
   align-items: ${(props) => props.alignItemsGrid};
+
+  height: 100%;
 `;
