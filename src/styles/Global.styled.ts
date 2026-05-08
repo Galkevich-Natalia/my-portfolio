@@ -28,6 +28,8 @@ export const GlobalStyle = createGlobalStyle`
 
     a {
         text-decoration: none;
+        margin: 0;
+        padding: 0;
     }
 
     ul {

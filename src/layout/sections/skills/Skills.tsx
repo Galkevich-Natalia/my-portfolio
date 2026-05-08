@@ -16,7 +16,7 @@ export const Skills = () => {
         <FlexWrapper
           display={"grid"}
           gridTemplateColumns={"repeat(auto-fit, minmax(180px, 1fr))"}
-          gap={"60px 20px"}
+          gap={"65px 20px"}
           justifyItems={"center"}
           alignItemsGrid={"center"}
           paddingTop={"85px"}
