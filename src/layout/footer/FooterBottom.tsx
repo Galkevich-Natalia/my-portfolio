@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Menu } from "../../components/menu/Menu";
+import { theme } from "../../styles/Theme";
 
 const items = ["Home", "About", "Tech Stack", "Projects", "Contact"];
 
@@ -19,4 +20,9 @@ const StyledFooterBottom = styled.div`
 
 const Copyright = styled.small`
   color: #fff;
+  font-weight: 400;
+  font-size: 18px;
+  /* line-height: 144%;
+  text-align: center; */
+  color: ${theme.colors.fontSecondary};
 `;

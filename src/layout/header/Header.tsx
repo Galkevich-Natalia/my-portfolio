@@ -18,7 +18,7 @@ export const Header = () => {
         >
           <Logo />
 
-          <FlexWrapper>
+          <FlexWrapper gap={"48px"}>
             <Menu menuItems={items} />
             <Social />
           </FlexWrapper>

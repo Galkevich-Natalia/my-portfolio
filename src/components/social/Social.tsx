@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Icon } from "../icon/Icon";
+import { theme } from "../../styles/Theme";
 
 export const Social = () => {
   return (
@@ -39,13 +40,20 @@ export const Social = () => {
 };
 
 const SocialList = styled.ul`
-  margin-left: 20px;
   display: flex;
-  gap: 30px;
+  gap: 20px;
 `;
 
 const SocialItem = styled.li`
   list-style-type: none;
 `;
 
-const SocialLink = styled.a``;
+const SocialLink = styled.a`
+  color: ${theme.colors.fontSecondary};
+  display: inline-block;
+
+  &:hover {
+    color: ${theme.colors.accent};
+    transform: translateY(-4px);
+  }
+`;

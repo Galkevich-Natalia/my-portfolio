@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { theme } from "../../styles/Theme";
 
 export const Menu = (props: { menuItems: Array<string> }) => {
   return (
@@ -28,7 +29,7 @@ const StyledMenu = styled.nav``;
 
 const MenuList = styled.ul`
   display: flex;
-  gap: 20px;
+  gap: 52px;
 `;
 
 const MenuLink = styled.a`
@@ -45,7 +46,7 @@ const Mask = styled.span`
   display: inline-block;
   height: 50%;
   overflow-y: hidden;
-  color: #a7a7a7;
+  color: ${theme.colors.fontSecondary};
 
   & + & {
     top: 50%;
@@ -59,13 +60,11 @@ const Mask = styled.span`
 const MenuItem = styled.li`
   position: relative;
 
-  padding-right: 20px;
-
   &::before {
     content: "";
     display: inline-block;
     height: 3px;
-    background-color: #a7a7a7;
+    background-color: ${theme.colors.fontSecondary};
 
     position: absolute;
     top: 50%;
