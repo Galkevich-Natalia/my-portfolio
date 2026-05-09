@@ -30,16 +30,17 @@ export const GlobalStyle = createGlobalStyle`
         text-decoration: none;
         margin: 0;
         padding: 0;
+        cursor: pointer;
     }
 
     ul {
         list-style: none;
     }
 
-    button {
+    /* button {
         background-color: unset;
         border: none;
-    }
+    } */
 
     header,
     section,
