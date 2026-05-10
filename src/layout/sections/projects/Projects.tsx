@@ -10,6 +10,9 @@ import project4Img from "./../../../assets/images/project_4.webp";
 import project5Img from "./../../../assets/images/project_5.webp";
 import project6Img from "./../../../assets/images/project_6.webp";
 import { Container } from "../../../components/Container";
+import { TabMenu } from "./tabMenu/TabMenu";
+
+const projectsItems = ["All", "Landing page", "React", "Spa"];
 
 export const Projects = () => {
   return (
@@ -19,6 +22,7 @@ export const Projects = () => {
           title={"Projects"}
           subtitle={"Things I’ve built so far"}
         />
+        <TabMenu menuItems={projectsItems} />
         <FlexWrapper
           display={"grid"}
           gridTemplateColumns={"repeat(auto-fit, minmax(360px, 1fr))"}

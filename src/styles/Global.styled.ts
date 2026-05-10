@@ -11,6 +11,7 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     body {
+        margin: 0;
         font-family:
             "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
             "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
@@ -37,10 +38,12 @@ export const GlobalStyle = createGlobalStyle`
         list-style: none;
     }
 
-    /* button {
+    button {
         background-color: unset;
         border: none;
-    } */
+        cursor: pointer;
+        color: ${theme.colors.fontContrast};
+    }
 
     header,
     section,

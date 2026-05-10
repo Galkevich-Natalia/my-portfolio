@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Icon } from "../../../../components/icon/Icon";
+import { theme } from "../../../../styles/Theme";
 
 type ProjectPropsType = {
   title: string;
@@ -14,7 +15,7 @@ export const Project = (props: ProjectPropsType) => {
   return (
     <StyledProject>
       <Image src={props.src} alt={props.alt} />
-      <ContentProject>
+      <Description>
         <ContentWrap>
           <Title>
             {props.title}
@@ -28,7 +29,7 @@ export const Project = (props: ProjectPropsType) => {
         </ContentWrap>
 
         <LinkWrap>
-          <Link>
+          <Link href={"#"}>
             <Icon
               iconId={"chain"}
               width={"20px"}
@@ -37,7 +38,7 @@ export const Project = (props: ProjectPropsType) => {
             ></Icon>
             Live Preview
           </Link>
-          <Link>
+          <Link href={"#"}>
             <Icon
               iconId={"githubCard"}
               width={"20px"}
@@ -47,13 +48,13 @@ export const Project = (props: ProjectPropsType) => {
             View Code
           </Link>
         </LinkWrap>
-      </ContentProject>
+      </Description>
     </StyledProject>
   );
 };
 
 const StyledProject = styled.div`
-  background-color: #363636;
+  background-color: ${theme.colors.secondaryBg};
   max-width: 373px;
   width: 100%;
   text-align: left;
@@ -69,7 +70,7 @@ const Image = styled.img`
   border-radius: 20px 20px 0 0;
 `;
 
-const ContentProject = styled.div`
+const Description = styled.div`
   padding: 25px 28px;
   display: flex;
   flex-direction: column;
@@ -84,7 +85,7 @@ const Title = styled.h3`
   font-weight: 500;
   font-size: 28px;
   line-height: 93%;
-  color: #ccc;
+  color: ${theme.colors.fontPrimary};
   margin-bottom: 14px;
 `;
 
@@ -92,7 +93,7 @@ const Text = styled.p`
   font-weight: 300;
   font-size: 18px;
   line-height: 1.4;
-  color: #ccc;
+  color: ${theme.colors.fontPrimary};
 `;
 
 const StackWrap = styled.div`
@@ -105,7 +106,7 @@ const StackTitle = styled.h4`
   font-weight: 400;
   font-size: 16px;
   line-height: 1.6;
-  color: #ccc;
+  color: ${theme.colors.fontPrimary};
   white-space: pre-wrap;
 `;
 
@@ -116,16 +117,21 @@ const StackName = styled.span`
 `;
 
 const LinkWrap = styled.div`
-  display: flex;
-  gap: 48px;
-  align-items: center;
   margin-top: auto;
 `;
 
 const Link = styled.a`
-  color: #fff;
+  color: ${theme.colors.fontContrast};
   text-decoration: underline;
   display: inline-flex;
   align-items: center;
   gap: 10px;
+
+  & + & {
+    margin-left: 48px;
+  }
+
+  &:hover {
+    color: ${theme.colors.accent};
+  }
 `;
