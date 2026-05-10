@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import { Logo } from "../../components/logo/Logo";
-import { Menu } from "../../components/menu/Menu";
 import { Social } from "../../components/social/Social";
 import { Container } from "../../components/Container";
 import { FlexWrapper } from "../../components/FlexWrapper";
+import { HeaderMenu } from "./headerMenu/HeaderMenu";
 
 const items = ["Home", "About", "Tech Stack", "Projects", "Contact"];
 
@@ -19,7 +19,7 @@ export const Header = () => {
           <Logo logoIconId={"logoHeader"} />
 
           <FlexWrapper gap={"48px"}>
-            <Menu menuItems={items} />
+            <HeaderMenu menuItems={items} />
             <Social />
           </FlexWrapper>
         </FlexWrapper>

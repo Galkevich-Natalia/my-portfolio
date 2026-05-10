@@ -1,13 +1,13 @@
 import styled from "styled-components";
-import { Menu } from "../../components/menu/Menu";
 import { theme } from "../../styles/Theme";
+import { FooterMenu } from "./footerMenu/FooterMenu";
 
 const items = ["Home", "About", "Tech Stack", "Projects", "Contact"];
 
 export const FooterBottom = () => {
   return (
     <StyledFooterBottom>
-      <Menu menuItems={items} />
+      <FooterMenu menuItems={items} />
       <Copyright>Designed and built by Pavan MG with Love & Coffee</Copyright>
     </StyledFooterBottom>
   );
