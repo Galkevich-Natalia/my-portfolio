@@ -1,17 +1,12 @@
 import styled from "styled-components";
-import { Icon } from "../../components/icon/Icon";
 import { Social } from "../../components/social/Social";
 import { theme } from "../../styles/Theme";
+import { Logo } from "../../components/logo/Logo";
 
 export const FooterTop = () => {
   return (
     <StyledFooterTop>
-      <Icon
-        iconId={"logoFooter"}
-        width={"97"}
-        height={"59"}
-        viewBox={"0 0 97 59"}
-      />
+      <Logo logoIconId={"logoFooter"} />
       <StyledContacts>
         <StyledContactsWrap>
           <Phone href="tel:+91 12345 09876">+91 12345 09876</Phone>

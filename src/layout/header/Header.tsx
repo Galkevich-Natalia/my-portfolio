@@ -16,7 +16,7 @@ export const Header = () => {
           justify={"space-between"}
           align={"center"}
         >
-          <Logo />
+          <Logo logoIconId={"logoHeader"} />
 
           <FlexWrapper gap={"48px"}>
             <Menu menuItems={items} />

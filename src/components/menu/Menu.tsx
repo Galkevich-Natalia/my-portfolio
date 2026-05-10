@@ -64,7 +64,7 @@ const MenuItem = styled.li`
     content: "";
     display: inline-block;
     height: 3px;
-    background-color: ${theme.colors.fontSecondary};
+    background-color: ${theme.colors.accent};
 
     position: absolute;
     top: 50%;
