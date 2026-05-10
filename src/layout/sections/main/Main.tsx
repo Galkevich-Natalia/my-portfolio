@@ -2,7 +2,8 @@ import styled from "styled-components";
 import photo from "./../../../assets/images/photo.webp";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import { Container } from "../../../components/Container";
-import { Square } from "../../../components/Square";
+import abstract from "../../../assets/images/Abstract.png";
+import { theme } from "../../../styles/Theme";
 
 export const Main = () => {
   return (
@@ -21,11 +22,6 @@ export const Main = () => {
           </MainTitle>
           <PhotoWrapper>
             <Photo src={photo} alt="personal_photo" />
-            <Square rotate={"-105deg"} />
-            <Square rotate={"-120deg"} />
-            <Square rotate={"-135deg"} />
-            <Square rotate={"-150deg"} />
-            <Square rotate={"-165deg"} />
           </PhotoWrapper>
         </FlexWrapper>
       </Container>
@@ -58,7 +54,7 @@ const NameLine = styled(Line)`
     content: "";
     width: 100%;
     height: 20px;
-    background-color: #4a3aff;
+    background-color: ${theme.colors.accent};
     position: absolute;
     bottom: 5px;
     z-index: -1;
@@ -69,6 +65,21 @@ const PhotoWrapper = styled.div`
   position: relative;
   width: 350px;
   height: 350px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 628px;
+    height: 628px;
+    background-image: url(${abstract});
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
 `;
 
 const Photo = styled.img`
@@ -76,6 +87,4 @@ const Photo = styled.img`
   height: 100%;
   object-fit: cover;
   border-radius: 50%;
-  position: relative;
-  z-index: 2;
 `;
