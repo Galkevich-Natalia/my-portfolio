@@ -42,6 +42,10 @@ export const Social = () => {
 const SocialList = styled.ul`
   display: flex;
   gap: 20px;
+
+  @media ${theme.media.tablet} {
+    flex-direction: row;
+  }
 `;
 
 const SocialItem = styled.li`

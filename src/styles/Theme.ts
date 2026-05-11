@@ -7,10 +7,13 @@ export const theme = {
     fontSecondary: "#a7a7a7",
     fontContrast: "#fff",
 
-    // accent: "#7275D5",
     accent: "#4a4da9",
     borderColor: "#4a4a4a",
     placeholderColor: "#636262",
-    // placeholderColor: "#797878",
+  },
+
+  media: {
+    tablet: "screen and (max-width: 768px)",
+    mobile: "screen and (max-width: 576px)",
   },
 };
