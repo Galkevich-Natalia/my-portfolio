@@ -5,11 +5,11 @@ import { Social } from "../../../components/social/Social";
 export const MobileMenu = (props: { menuItems: Array<string> }) => {
   return (
     <StyledMobileMenu>
-      <BurgerButton isOpen={true}>
+      <BurgerButton isOpen={false}>
         <span></span>
       </BurgerButton>
 
-      <MobileMenuPopup isOpen={true}>
+      <MobileMenuPopup isOpen={false}>
         <MenuList>
           {props.menuItems.map((item, index) => {
             return (
