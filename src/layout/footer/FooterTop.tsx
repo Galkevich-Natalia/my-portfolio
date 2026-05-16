@@ -30,6 +30,7 @@ const StyledContacts = styled.div`
   align-items: center;
   gap: 48px;
   /* padding-top: 12px */
+  flex-wrap: wrap;
 `;
 
 const StyledContactsWrap = styled.div`
