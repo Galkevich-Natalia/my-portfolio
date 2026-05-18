@@ -58,10 +58,7 @@ const MainWrapper = styled.div`
 
 const MainTitle = styled.h1`
   ${font({ weight: 700, Fmax: 58, Fmin: 36, color: "#d9d9d9" })}
-  /* font-weight: 700;
-  font-size: 58px; */
   letter-spacing: -0.02em;
-  /* color: #d9d9d9; */
 `;
 
 const Line = styled.span`
