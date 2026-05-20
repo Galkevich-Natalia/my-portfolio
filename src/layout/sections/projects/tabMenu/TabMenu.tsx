@@ -22,13 +22,17 @@ const StyledTabMenu = styled.nav``;
 const MenuList = styled.ul`
   display: flex;
   gap: 52px;
-
   justify-content: center;
+
+  @media ${theme.media.tablet} {
+    gap: 20px;
+  }
 `;
 
 const ListItem = styled.li`
   position: relative;
   z-index: 0;
+  text-align: center;
 `;
 
 const Link = styled.a`

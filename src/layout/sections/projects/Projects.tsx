@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { SectionComTitle } from "../../../components/sectionComTitle/SectionComTitle";
-import { FlexWrapper } from "../../../components/FlexWrapper";
+// import { FlexWrapper } from "../../../components/FlexWrapper";
 import { Project } from "./project/Project";
 
 import project1Img from "./../../../assets/images/project_1.webp";
@@ -23,12 +23,13 @@ export const Projects = () => {
           subtitle={"Things I’ve built so far"}
         />
         <TabMenu menuItems={projectsItems} />
-        <FlexWrapper
+        {/* <FlexWrapper
           display={"grid"}
           gridTemplateColumns={"repeat(auto-fit, minmax(360px, 1fr))"}
           gap={"65px 48px"}
           paddingTop={"60px"}
-        >
+        > */}
+        <ProjectsWrapper>
           <Project
             src={project1Img}
             alt={"Project_1"}
@@ -94,10 +95,19 @@ export const Projects = () => {
             stackTitle={"Tech stack: "}
             stackName={"HTML, JavaScript, SASS, React"}
           />
-        </FlexWrapper>
+          {/* </FlexWrapper> */}
+        </ProjectsWrapper>
       </Container>
     </StyledProjects>
   );
 };
 
 const StyledProjects = styled.section``;
+
+const ProjectsWrapper = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 65px 48px;
+  padding-top: 60px;
+  justify-items: center;
+`;
