@@ -61,6 +61,10 @@ const StyledProject = styled.div`
   border-radius: 20px;
   display: flex;
   flex-direction: column;
+
+  @media ${theme.media.tablet} {
+    max-width: 300px;
+  }
 `;
 
 const Image = styled.img`

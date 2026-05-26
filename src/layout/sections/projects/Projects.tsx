@@ -108,6 +108,9 @@ const ProjectsWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
   gap: 65px 48px;
-  padding-top: 60px;
+
+  /* padding-top: 60px; */
+  padding-top: 36px;
+
   justify-items: center;
 `;

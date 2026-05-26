@@ -7,7 +7,7 @@ import { HeaderMenu } from "./headerMenu/HeaderMenu";
 import { theme } from "../../styles/Theme";
 import { MobileMenu } from "./mobileMenu/MobileMenu";
 
-const items = ["Home", "About", "Tech Stack", "Projects", "Contact"];
+const items = ["About", "Tech Stack", "Projects", "Contact"];
 
 export const Header = () => {
   return (

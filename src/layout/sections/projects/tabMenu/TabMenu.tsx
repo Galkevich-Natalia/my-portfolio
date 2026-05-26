@@ -25,7 +25,8 @@ const MenuList = styled.ul`
   justify-content: center;
 
   @media ${theme.media.tablet} {
-    gap: 20px;
+    gap: 10px;
+    flex-wrap: wrap;
   }
 `;
 

@@ -36,6 +36,7 @@ const StyledContacts = styled.div`
 const StyledContactsWrap = styled.div`
   display: flex;
   gap: 33px;
+  flex-wrap: wrap;
 `;
 
 const Phone = styled.a`

@@ -30,6 +30,7 @@ const StyledFooterMenu = styled.nav``;
 const MenuList = styled.ul`
   display: flex;
   gap: 52px;
+  flex-wrap: wrap;
 `;
 
 const Link = styled.a`

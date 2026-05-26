@@ -21,7 +21,7 @@ export const Main = () => {
           <MainTitle>
             <Line>Hi everybody!</Line>
             <Line>My name is</Line>
-            <NameLine>Natalia Galkevich</NameLine>
+            <NameLine>Natali Galkevich</NameLine>
             <Line>A web developer</Line>
           </MainTitle>
           <PhotoWrapper>
@@ -36,12 +36,18 @@ export const Main = () => {
 };
 
 const StyledMain = styled.section`
-  min-height: 100vh;
+  /* min-height: 100vh; */
   display: flex;
   padding: 315px 0 205px 0;
+  /* padding-top: 315px; */
+  overflow-x: clip;
+
+  @media ${theme.media.tablet} {
+    padding: 250px 0 205px 0;
+  }
 
   @media ${theme.media.mobile} {
-    padding: 135px 0 75px 0;
+    padding: 50px 0;
   }
 `;
 
@@ -53,12 +59,21 @@ const MainWrapper = styled.div`
 
   @media ${theme.media.tablet} {
     justify-content: center;
+    flex-direction: column-reverse;
+  }
+
+  @media ${theme.media.mobile} {
+    padding: 90px 0 50px 0;
   }
 `;
 
 const MainTitle = styled.h1`
   ${font({ weight: 700, Fmax: 58, Fmin: 36, color: "#d9d9d9" })}
   letter-spacing: -0.02em;
+
+  @media ${theme.media.tablet} {
+    text-align: center;
+  }
 `;
 
 const Line = styled.span`
@@ -84,11 +99,16 @@ const PhotoWrapper = styled.div`
   position: relative;
   width: 350px;
   height: 350px;
-  margin: 65px 0 0 25px;
+  margin-left: 22px;
+
+  @media ${theme.media.tablet} {
+    width: 300px;
+    height: 300px;
+    margin: 0 0 100px 0;
+  }
 
   @media ${theme.media.mobile} {
-    width: 310px;
-    height: 310px;
+    margin: 0 0 50px 0;
   }
 
   &::before {
