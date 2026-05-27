@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { font } from "../../styles/Common";
 
 type SectionComTitlePropsType = {
   title: string;
@@ -19,17 +20,13 @@ const SectionComTitleWrap = styled.div`
 `;
 
 export const SectionTitle = styled.h2`
-  font-weight: 700;
-  font-size: 48px;
+  ${font({ weight: 700, color: "#ccc", Fmax: 48, Fmin: 40 })}
   text-align: center;
-  color: #ccc;
 `;
 
 export const SectionSubtitle = styled.p`
-  font-weight: 400;
-  font-size: 32px;
+  ${font({ weight: 400, color: "#a7a7a7", Fmax: 32, Fmin: 24 })}
   text-align: center;
-  color: #a7a7a7;
   display: inline-block;
   margin: 20px 0 45px 0;
 `;

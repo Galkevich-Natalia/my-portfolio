@@ -43,7 +43,7 @@ const StyledMain = styled.section`
   overflow-x: clip;
 
   @media ${theme.media.tablet} {
-    padding: 250px 0 205px 0;
+    padding: 218px 0 205px 0;
   }
 
   @media ${theme.media.mobile} {
@@ -102,12 +102,12 @@ const PhotoWrapper = styled.div`
   margin-left: 22px;
 
   @media ${theme.media.tablet} {
-    width: 300px;
-    height: 300px;
     margin: 0 0 100px 0;
   }
 
   @media ${theme.media.mobile} {
+    width: 300px;
+    height: 300px;
     margin: 0 0 50px 0;
   }
 
@@ -124,6 +124,11 @@ const PhotoWrapper = styled.div`
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
+
+    @media ${theme.media.mobile} {
+      width: 528px;
+      height: 528px;
+    }
   }
 `;
 

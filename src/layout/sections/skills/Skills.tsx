@@ -1,8 +1,9 @@
 import styled from "styled-components";
-import { FlexWrapper } from "../../../components/FlexWrapper";
+// import { FlexWrapper } from "../../../components/FlexWrapper";
 import { Icon } from "../../../components/icon/Icon";
 import { SectionComTitle } from "../../../components/sectionComTitle/SectionComTitle";
 import { Container } from "../../../components/Container";
+import { theme } from "../../../styles/Theme";
 
 export const Skills = () => {
   return (
@@ -13,14 +14,16 @@ export const Skills = () => {
           subtitle={"Technologies I’ve been working with recently"}
         />
 
-        <FlexWrapper
+        {/* <FlexWrapper
           display={"grid"}
           gridTemplateColumns={"repeat(auto-fit, minmax(180px, 1fr))"}
           gap={"65px 20px"}
           justifyItems={"center"}
           alignItemsGrid={"center"}
           paddingTop={"85px"}
-        >
+        > */}
+
+        <SkillsWrapper>
           <Icon
             iconId={"html"}
             width={"120"}
@@ -93,7 +96,8 @@ export const Skills = () => {
             height={"88"}
             viewBox={"0 0 88 88"}
           />
-        </FlexWrapper>
+        </SkillsWrapper>
+        {/* </FlexWrapper> */}
       </Container>
     </StyledSkills>
   );
@@ -101,4 +105,21 @@ export const Skills = () => {
 
 const StyledSkills = styled.section`
   text-align: center;
+`;
+
+const SkillsWrapper = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 64px 20px;
+  justify-items: center;
+  align-items: center;
+  padding-top: 85px;
+
+  @media ${theme.media.tablet} {
+    padding-top: 55px;
+  }
+
+  @media ${theme.media.mobile} {
+    padding-top: 20px;
+  }
 `;
